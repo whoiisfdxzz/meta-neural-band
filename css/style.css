@@ -1,0 +1,389 @@
+/* Paleta:
+   Negro de fondo   #14161b
+   Gris oscuro      #23262e
+   Gris de fondo    #eef1f4
+   Gris de líneas   #c9d1da
+   Texto            #16181d
+   Texto secundario #454b56
+   Naranja          #e2522f
+   Naranja oscuro   #a52e12
+   Blanco           #ffffff
+*/
+
+/* ---------- 1. Base ---------- */
+html {
+    scroll-padding-top: 4.5rem;   /* espacio para el menú al saltar a un ancla */
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: #16181d;
+    background-color: #eef1f4;
+}
+
+main {
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    margin-top: 4.5rem;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+/* ---------- 2. Cabecera ---------- */
+header {
+    background-color: #14161b;
+    color: #ffffff;
+    padding: 4.5rem 1.5rem 3.5rem 1.5rem;
+}
+
+.centrado {
+    max-width: 66rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin: 0 0 1.5rem 0;
+}
+
+.lema {
+    max-width: 36rem;
+    font-size: 1.3rem;
+    line-height: 1.45;
+}
+
+.firma {
+    font-size: 0.9rem;
+    color: #b4bcc7;
+    margin-bottom: 0;
+}
+
+/* ---------- 3. Menú ---------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;                  /* por encima de los elementos posicionados */
+    background-color: #23262e;    /* opaco para que no se vea el contenido a través */
+    border-bottom: 4px solid #e2522f;
+    padding: 0.3rem 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.25rem 0.9rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+nav a:hover {
+    background-color: #e2522f;
+    color: #ffffff;
+}
+
+/* ---------- 4. Títulos ---------- */
+h2 {
+    display: inline-block;
+    font-size: 2.3rem;
+    line-height: 1.15;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.3rem;
+    border-bottom: 4px solid #e2522f;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 2.5rem 0 1rem 0;
+}
+
+h4 {
+    font-size: 1.15rem;
+    margin: 0 0 0.5rem 0;
+}
+
+/* ---------- 5. Enlaces y énfasis ---------- */
+a {
+    color: #a52e12;
+}
+
+a:hover {
+    color: #16181d;
+}
+
+a:focus-visible {
+    outline: 3px solid #e2522f;
+    outline-offset: 3px;
+}
+
+em {
+    font-style: italic;
+}
+
+/* ---------- 6. Listas ---------- */
+main li {
+    margin-bottom: 0.7rem;
+}
+
+main ul,
+main ol {
+    max-width: 44rem;
+    padding-left: 1.4rem;
+}
+
+.enlaces {
+    max-width: 50rem;
+}
+
+/* ---------- 7. Imágenes y figuras ---------- */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    background-color: #ffffff;
+    border: 1px solid #c9d1da;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #454b56;
+}
+
+/* ---------- 8. Tablas ---------- */
+.tabla-con-scroll {
+    overflow-x: auto;             /* en el móvil la tabla se desplaza en vez de encogerse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 0.6rem;
+}
+
+th,
+td {
+    border: 1px solid #c9d1da;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+}
+
+thead th {
+    background-color: #23262e;
+    color: #ffffff;
+}
+
+tbody th[scope="row"] {
+    background-color: #e1e6ec;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f6f8fa;
+}
+
+.ficha {
+    font-size: 0.95rem;
+}
+
+/* ---------- 9. Posicionamiento ---------- */
+.hito {
+    position: relative;           /* referencia de la etiqueta */
+}
+
+.etiqueta {
+    position: absolute;
+    top: -0.9rem;
+    right: 1rem;
+    padding: 0.2rem 0.8rem;
+    background-color: #e2522f;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 999px;
+}
+
+.foto {
+    position: relative;           /* referencia del figcaption */
+}
+
+.foto img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.foto figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.3rem 0.7rem;
+    background-color: rgba(20, 22, 27, 0.85);
+    color: #ffffff;
+    font-size: 0.8rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.arriba {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #e2522f;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 3px 8px rgba(20, 22, 27, 0.4);
+}
+
+.arriba:hover {
+    background-color: #14161b;
+    color: #ffffff;
+}
+
+/* ---------- 10. Flexbox ---------- */
+.dos-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.texto {
+    flex: 1 1 24rem;
+}
+
+.lateral {
+    flex: 1 1 20rem;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.galeria article {
+    flex: 1 1 17rem;              /* crece, encoge y parte de 17rem */
+    box-sizing: border-box;       /* la base incluye relleno y borde */
+    background-color: #ffffff;
+    border: 1px solid #c9d1da;
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+}
+
+.galeria h3 {
+    margin-top: 0;
+}
+
+.galeria p {
+    margin-bottom: 0;
+    color: #454b56;
+}
+
+.hito {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    background-color: #ffffff;
+    border: 1px solid #c9d1da;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.anio {
+    flex: 0 0 6rem;
+    margin: 0;
+    font-size: 2.3rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.hito-texto {
+    flex: 1 1 20rem;
+}
+
+.hito-texto h3 {
+    margin-top: 0;
+}
+
+.hito-texto p {
+    margin-bottom: 0;
+}
+
+.foto {
+    flex: 1 1 16rem;
+}
+
+.actual {
+    border: 3px solid #e2522f;
+}
+
+.actual .anio {
+    color: #a52e12;
+}
+
+/* ---------- 11. Pie ---------- */
+footer {
+    margin-top: 5rem;
+    padding: 2.5rem 1.5rem 4.5rem 1.5rem;
+    background-color: #14161b;
+    color: #b4bcc7;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ---------- 12. Pantallas estrechas ---------- */
+@media (max-width: 45rem) {
+    nav {
+        position: static;         /* el menú ocupa varias líneas: mejor no pegarlo */
+    }
+
+    html {
+        scroll-padding-top: 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+}
